@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.navbar {
+  width: 100vw;
+  background-color: #fff;
+  box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 20px 70px;
+}
+
+.header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/background.jpg);
+  background-size: cover;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header-inner {
+  color: #fff;
+  text-align: center;
+}
+
+.header-inner h1 {
+  font-size: 150px;
+  font-family: "Great Vibes";
+}
+
+.header-inner form input {
+  border: none;
+  width: 500px;
+  padding: 15px 25px;
+  box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.header-inner form input:focus {
+  outline: 0;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.555);
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: .5s;
+  z-index: -1;
+}
+
+.header-inner form input:focus + div {
+  opacity: 1;
+  z-index: 1;
+}
+
+.navbar-logo {
+  text-decoration: none;
+  font-size: 25px;
+  color: #ff3f34;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-links li a {
+  padding: 20px 20px;
+  text-decoration: none;
+  color: black;
+  transition: .3s;
+  font-weight: bold;
+}
+
+.navbar-links li a:hover {
+  color: #ff3f34;
+}
+
+.navbar-dropdown {
+  position: relative;
+}
+
+.navbar-dropdown .dropdown {
+  position: absolute;
+  padding: 20px 0;
+  transform: translateY(55px);
+  background-color: #fff;
+  transition: .5s;
+  opacity: 0;
+  visibility: hidden;
+  width: 300px;
+  z-index: 111;
+}
+
+.navbar-dropdown .dropdown a {
+  padding: 20px 50px;
+  color: gray;
+  display: block;
+}
+
+
+.navbar-dropdown:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(20px);
+}
+
+.navbar-dropdown .dropdown a:hover {
+  padding-left: 70px;
+}
